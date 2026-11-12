@@ -7,6 +7,7 @@
 <meta name="description" content="Términos y Condiciones del uso de Cafeteando: membresía, canjes, reglas de uso, cancelación y responsabilidad.">
 <meta name="theme-color" content="#2A1A12">
 <link rel="canonical" href="https://somoscafeteando.com.ar/terminos">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Términos y Condiciones — Cafeteando®">
 <meta property="og:description" content="Términos y Condiciones del uso de Cafeteando: membresía, canjes, reglas de uso, cancelación y responsabilidad.">
@@ -19,21 +20,23 @@
 *{box-sizing:border-box}body{margin:0;background:#FAF8F4;color:#2A1A12;font-family:'Poppins',sans-serif;line-height:1.7;font-size:16px}
 header{background:#2A1A12;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 header a{color:#FAF8F4;text-decoration:none;font-weight:500;font-size:.95rem}header .brand{font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.25rem}
-header .back{color:#CBA392}
+header .right{display:flex;align-items:center;gap:16px}header .back{color:#CBA392}
+header button{background:transparent;color:#FAF8F4;border:1px solid rgba(250,248,244,.4);border-radius:99px;padding:6px 14px;font:600 .8rem 'Poppins',sans-serif;cursor:pointer}
 main{max-width:780px;margin:0 auto;padding:48px 24px 72px}
-h1{font-family:'Red Hat Display',sans-serif;color:#764733;font-size:2.1rem;margin:0 0 8px}
+h1{font-family:'Red Hat Display',sans-serif;color:#764733;font-size:2.1rem;margin:0 0 8px;line-height:1.2}
 .sub{color:#5A4A40;margin:0 0 32px}
 h2{font-family:'Red Hat Display',sans-serif;color:#764733;font-size:1.3rem;margin:36px 0 8px}
 p,li{color:#2A1A12}a{color:#8F513A}ul{padding-left:22px}
 footer{border-top:1px solid #E5DACB;padding:24px;text-align:center;color:#6F5F55;font-size:.85rem}
+html[lang="en"] .legal-es{display:none}html:not([lang="en"]) .legal-en{display:none}
 </style>
 </head>
 <body>
-<header><a class="brand" href="/">Cafeteando®</a><a class="back" href="/">← Volver al sitio</a></header>
+<header><a class="brand" href="/">Cafeteando®</a><div class="right"><a class="back" href="/"><span class="legal-es">← Volver al sitio</span><span class="legal-en">← Back to the site</span></a><button type="button" id="lg" aria-label="Cambiar idioma / Change language">EN</button></div></header>
 <main>
-<h1>Términos y Condiciones</h1>
-<p class="sub">Cafeteando® · tu pausa activa</p>
-
+<h1><span class="legal-es">Términos y Condiciones</span><span class="legal-en">Terms & Conditions</span></h1>
+<p class="sub">Cafeteando® · <span class="legal-es">tu pausa activa</span><span class="legal-en">your active break</span></p>
+<div class="legal-es" lang="es">
 <h2>1. Aceptación</h2>
 <p>Al registrarte y utilizar CAFETEANDO, declarás haber leído y aceptado estos Términos y Condiciones y la Política de Privacidad.</p>
 <p>Si no estás de acuerdo con estos términos, no podrás utilizar el servicio.</p>
@@ -54,9 +57,9 @@ footer{border-top:1px solid #E5DACB;padding:24px;text-align:center;color:#6F5F55
 <h2>5. Reglas de uso del servicio</h2>
 <p>El uso de CAFETEANDO está sujeto a las siguientes reglas:</p>
 <p><strong>a)</strong> Podés canjear un (1) Café de la Membresía por día calendario, desde las 00:00 hasta las 23:59. Los canjes no utilizados no se acumulan ni se trasladan a días posteriores.</p>
-<p><strong>b)</strong> Podés realizar hasta cuatro (4) canjes por mes calendario en un mismo establecimiento. Esta restricción se reinicia el primer día de cada mes.</p>
+<p><strong>b)</strong> Podés realizar hasta cuatro (4) canjes por ciclo de suscripción en un mismo establecimiento. Esta restricción se reinicia cuando se renueva tu membresía.</p>
 <p><strong>c)</strong> Cada canje requiere realizar previamente al menos una (1) consumición adicional en el establecimiento, de acuerdo con las condiciones informadas por CAFETEANDO y el establecimiento adherido.</p>
-<p><strong>d)</strong> Al momento del lanzamiento, los Cafés de la Membresía estarán disponibles exclusivamente para consumo dentro del establecimiento. CAFETEANDO podrá incorporar posteriormente una modalidad Take Away, sujeta a las condiciones que se comuniquen oportunamente y a la adhesión de los establecimientos que participen de dicha modalidad.</p>
+<p><strong>d)</strong> Los Cafés de la Membresía están disponibles para consumo dentro del establecimiento, salvo que el establecimiento adherido decida habilitar la modalidad Take Away, lo que se informará en su descripción dentro de la aplicación.</p>
 <p><strong>e)</strong> La membresía es personal e intransferible. Está prohibido compartir la cuenta, código de canje o mecanismo de validación con terceros, o utilizar la membresía en beneficio de personas distintas del titular.</p>
 <p><strong>f)</strong> El usuario deberá respetar las condiciones de funcionamiento y horarios informados por cada establecimiento adherido.</p>
 <p><strong>g)</strong> CAFETEANDO podrá suspender o cancelar una cuenta cuando existan incumplimientos de estos Términos y Condiciones, uso fraudulento, manipulación del sistema, utilización indebida de códigos o cualquier otra conducta que afecte el funcionamiento del servicio, sin perjuicio de los derechos que pudieran corresponder al usuario conforme a la normativa aplicable.</p>
@@ -89,8 +92,72 @@ footer{border-top:1px solid #E5DACB;padding:24px;text-align:center;color:#6F5F55
 <h2>12. Contacto</h2>
 <p>Para consultas relacionadas con estos Términos y Condiciones: <strong><a href="mailto:contacto@somoscafeteando.com.ar">contacto@somoscafeteando.com.ar</a></strong></p>
 <p><strong>CAFETEANDO — Ciudad Autónoma de Buenos Aires, República Argentina.</strong></p>
-      
+      </div>
+<div class="legal-en" lang="en"><p><em>This English translation is provided for convenience. In case of any discrepancy, the Spanish version prevails.</em></p>
+<h2>1. Acceptance</h2>
+<p>By registering and using CAFETEANDO, you declare that you have read and accepted these Terms and Conditions and the Privacy Policy.</p>
+<p>If you do not agree with these terms, you may not use the service.</p>
+<p>These Terms and Conditions govern the relationship between the user and <strong>CAFETEANDO</strong> regarding the use of the application and the membership service.</p>
+<h2>2. The service</h2>
+<p>CAFETEANDO is a membership platform that gives its users access to one <strong>Membership Coffee per day</strong> at establishments that are part of the CAFETEANDO network, subject to the conditions and limits set out in these Terms and Conditions.</p>
+<p>The service is provided through the mobile application and/or CAFETEANDO's official digital platforms.</p>
+<p>The availability of establishments, opening hours, types of coffee included and other specific conditions may vary for each partner establishment.</p>
+<h2>3. Requirements to use the service</h2>
+<p>To use CAFETEANDO you must:</p>
+<ul>
+<li>be over 18 years old;</li>
+<li>have a valid email address;</li>
+<li>have an enabled payment method where applicable;</li>
+<li>have a personal CAFETEANDO account;</li>
+<li>be within the areas where CAFETEANDO operates and where partner establishments are available for redemptions.</li>
+</ul>
+<h2>4. Membership and payments</h2>
+<p>The CAFETEANDO membership is monthly and, unless expressly stated otherwise at the time of purchase, renews automatically.</p>
+<p>Payments are processed through <strong>Mercado Pago</strong> or other payment methods that CAFETEANDO may enable.</p>
+<p>During the beta period, CAFETEANDO may offer a free membership for the period and under the conditions communicated at the time of registration.</p>
+<p>Once the free period ends, the membership price communicated to the user at the time of purchase will start to be charged.</p>
+<p>CAFETEANDO may change the membership price for future periods, notifying the user in advance in accordance with applicable regulations.</p>
+<h2>5. Rules for using the service</h2>
+<p>The use of CAFETEANDO is subject to the following rules:</p>
+<p><strong>a)</strong> You may redeem one (1) Membership Coffee per calendar day, from 00:00 to 23:59. Unused redemptions do not accumulate or carry over to later days.</p>
+<p><strong>b)</strong> You may make up to four (4) redemptions per subscription cycle at the same establishment. This limit resets when your membership renews.</p>
+<p><strong>c)</strong> Each redemption requires first making at least one (1) additional purchase at the establishment, in accordance with the conditions communicated by CAFETEANDO and the partner establishment.</p>
+<p><strong>d)</strong> Membership Coffees are available for consumption inside the establishment, unless the partner establishment chooses to enable the Take Away option, which will be indicated in its description within the application.</p>
+<p><strong>e)</strong> The membership is personal and non-transferable. Sharing the account, redemption code or validation mechanism with third parties, or using the membership for the benefit of anyone other than the holder, is prohibited.</p>
+<p><strong>f)</strong> The user must respect the operating conditions and opening hours communicated by each partner establishment.</p>
+<p><strong>g)</strong> CAFETEANDO may suspend or cancel an account in the event of breaches of these Terms and Conditions, fraudulent use, manipulation of the system, misuse of codes or any other conduct that affects the operation of the service, without prejudice to any rights the user may have under applicable regulations.</p>
+<h2>6. Cancelling the membership</h2>
+<p>You may cancel your membership through the mechanisms made available by CAFETEANDO.</p>
+<p>Cancellation takes effect in accordance with the conditions communicated at the time of purchase and, where applicable, at the end of the membership period already paid for.</p>
+<p>Unless applicable regulations provide otherwise, cancellation does not automatically entitle you to a proportional refund for periods already started.</p>
+<p>During the free beta period, if you cancel before a paid period begins, no charge will be made.</p>
+<h2>7. Availability of the service and establishments</h2>
+<p>CAFETEANDO does not guarantee the permanent availability of all partner establishments.</p>
+<p>Establishments may join, change their opening days or hours, change the specific conditions of their Membership Coffee or leave the network in accordance with the conditions applicable to each establishment.</p>
+<p>CAFETEANDO will endeavour to keep the information available in the application up to date.</p>
+<p>The temporary unavailability of a particular establishment does not in itself constitute an interruption of the general CAFETEANDO service.</p>
+<h2>8. Liability</h2>
+<p>CAFETEANDO acts as a platform connecting users with partner establishments.</p>
+<p>Each establishment is responsible for the products it offers, their preparation, quality, hygiene, customer service and the operating conditions of its premises.</p>
+<p>CAFETEANDO is not responsible for matters that are exclusively under the control of the establishment, without prejudice to any liability that may apply by law.</p>
+<p>CAFETEANDO is likewise not responsible for interruptions or failures originating exclusively from technology providers or third-party services, such as payment methods, internet services, hosting services or other external providers, without prejudice to any obligations that apply by law.</p>
+<p><strong>Nothing in these Terms and Conditions is intended to exclude or limit rights or liabilities that cannot be legally excluded or limited.</strong></p>
+<h2>9. Intellectual property</h2>
+<p>The CAFETEANDO name, its visual identity, logo, design, texts, content, graphic elements, software and other elements developed for the platform belong to CAFETEANDO or are used under the corresponding authorisations or licences.</p>
+<p>Their reproduction, modification, distribution, commercial exploitation or use outside the purposes permitted by CAFETEANDO is prohibited without prior authorisation.</p>
+<h2>10. Changes to the service</h2>
+<p>CAFETEANDO may make changes, updates and improvements to the application, features, systems and operational aspects of the service when necessary for its operation, evolution or improvement.</p>
+<p>When a change involves a substantial modification to the economic or essential conditions of the membership, CAFETEANDO will endeavour to communicate it in advance and will give the user the options that apply under applicable regulations.</p>
+<p>If the service is permanently discontinued, CAFETEANDO will communicate that decision with reasonable notice and will make, where applicable, the refunds required by law for periods paid for and not used.</p>
+<h2>11. Governing law and jurisdiction</h2>
+<p>These Terms and Conditions are governed by the laws of the Argentine Republic.</p>
+<p>In the event of a dispute, the courts with jurisdiction under applicable regulations will be competent.</p>
+<h2>12. Contact</h2>
+<p>For enquiries about these Terms and Conditions: <a href="mailto:contacto@somoscafeteando.com.ar"><strong>contacto@somoscafeteando.com.ar</strong></a></p>
+<p><strong>CAFETEANDO — Autonomous City of Buenos Aires, Argentine Republic.</strong></p>
+</div>
 </main>
-<footer>© 2026 Cafeteando® · Marca registrada. Todos los derechos reservados. · <a href="mailto:contacto@somoscafeteando.com.ar">contacto@somoscafeteando.com.ar</a></footer>
+<footer>© 2026 Cafeteando® · <span class="legal-es">Marca registrada. Todos los derechos reservados.</span><span class="legal-en">Registered trademark. All rights reserved.</span> · <a href="mailto:contacto@somoscafeteando.com.ar">contacto@somoscafeteando.com.ar</a></footer>
+<script>(function(){var T={es:'Términos y Condiciones — Cafeteando®',en:'Terms & Conditions — Cafeteando®'};var q=new URLSearchParams(location.search).get('lang'),st=null;try{st=localStorage.getItem('cafeteando-lang')}catch(e){}var l=/en/i.test(q||st||'')?'en':'es';var b=document.getElementById('lg');function set(x){l=x;document.documentElement.lang=x;document.title=T[x];b.textContent=x==='en'?'ES':'EN';}b.addEventListener('click',function(){set(l==='en'?'es':'en')});set(l);})();</script>
 </body>
 </html>
