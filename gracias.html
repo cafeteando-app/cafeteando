@@ -24,6 +24,8 @@ main{width:100%;max-width:420px}
 .ok{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:rgba(203,163,146,.18);border:1.5px solid rgba(203,163,146,.55)}
 h1{font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:clamp(1.7rem,7vw,2.1rem);line-height:1.15;margin:0 0 12px}
 h1 em{font-style:italic;color:#E3A784}
+.h1-top{display:block;font-size:clamp(2.4rem,11vw,3rem);line-height:1.05;margin-bottom:8px}
+.h1-sub{display:block;font-size:clamp(1.35rem,5.6vw,1.6rem);line-height:1.25}
 .lead{font-size:1.02rem;line-height:1.6;color:#F2E6DC;margin:0 0 28px}
 .btn{display:block;width:100%;padding:17px 24px;border-radius:999px;background:linear-gradient(135deg,#B9765A,#A96649 55%,#8F513A);color:#fff;
  font-weight:600;font-size:1.05rem;text-decoration:none;box-shadow:0 14px 30px rgba(0,0,0,.35);-webkit-tap-highlight-color:transparent}
@@ -42,7 +44,7 @@ h1 em{font-style:italic;color:#E3A784}
     <b>Cafeteando<sup>®</sup></b>
   </div>
   <div class="ok" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E3A784" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-  <h1>¡Listo! Tu membresía está <em>activa</em></h1>
+  <h1><span class="h1-top">¡Listo!</span><span class="h1-sub">Tu membresía está <em>activa</em></span></h1>
   <p class="lead">Ya podés canjear tu café del día en cualquier cafetería de la red.</p>
   <a class="btn" id="abrir" href="cafeteando://membresia">Volver a la app</a>
   <p class="small">Si el botón no abre la app, abrila desde tu celular. Tu membresía puede tardar unos segundos en aparecer.</p>
