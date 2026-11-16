@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Abrir Cafeteando</title>
+<meta name="theme-color" content="#2A1A12">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Red+Hat+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  /* Estilo adaptado al sitio somoscafeteando.com.ar (solo colores y tipografía) */
+  :root { --terracota:#A96649; --terracota-oscuro:#8F513A; --terracota-claro:#E3A784; --crema:#FAF8F4; --espresso:#2A1A12; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+         padding:32px 22px calc(32px + env(safe-area-inset-bottom)); color:var(--crema); font-family:'Poppins',Arial,Helvetica,sans-serif;
+         background:radial-gradient(120% 80% at 15% 0%,#8a5a43 0%,rgba(138,90,67,0) 55%),linear-gradient(160deg,#764733 0%,#4a2d20 45%,#2A1A12 100%); }
+  .card { width:100%; max-width:420px; text-align:center; background:none; }
+  .top { padding:0 0 30px; color:var(--crema); font-family:'Red Hat Display',Arial,sans-serif; font-size:1.6rem; font-weight:800; letter-spacing:-.01em; }
+  .top::before { content:""; display:block; width:76px; height:76px; margin:0 auto 14px; border-radius:20px;
+                 background:url(/apple-touch-icon.png) center/cover no-repeat; box-shadow:0 14px 30px rgba(0,0,0,.35); }
+  .body { padding:0; }
+  h1 { margin:0 0 12px; font-family:'Red Hat Display',Arial,sans-serif; font-size:clamp(1.7rem,7vw,2.1rem); font-weight:800; line-height:1.15; color:var(--crema); }
+  p { margin:0 0 24px; font-size:1.02rem; line-height:1.6; color:#F2E6DC; }
+  .btn { display:block; width:100%; padding:17px 24px; border-radius:999px; font-size:1.05rem; font-weight:600; text-decoration:none; margin-top:6px;
+         color:#fff; background:linear-gradient(135deg,#B9765A,var(--terracota) 55%,var(--terracota-oscuro)); box-shadow:0 14px 30px rgba(0,0,0,.35); }
+  .btn.sec { background:transparent; color:#F6D9C3; border:1.5px solid rgba(250,248,244,.45); box-shadow:none; }
+  .small { font-size:.88rem; line-height:1.55; color:rgba(250,248,244,.72); margin:26px 0 10px; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">Cafeteando</div>
+    <div class="body">
+      <h1 id="titulo">Abriendo Cafeteando…</h1>
+      <p id="msg">Si la app no se abre sola, tocá el botón.</p>
+      <a class="btn" id="abrir" href="cafeteando://membresia">Abrir la app</a>
+
+      <div id="descarga" hidden>
+        <p class="small">¿Todavía no tenés la app?</p>
+        <!-- COMPLETAR al lanzar: link de descarga (App Store / Google Play).
+             Mientras esté vacío, el botón no se muestra. -->
+        <a class="btn sec" id="tienda" href="" hidden>Descargar Cafeteando</a>
+        <p class="small" id="sinlink" hidden>Muy pronto vas a poder descargarla desde la tienda de tu celular.</p>
+      </div>
+    </div>
+  </div>
+<script>
+  // Links de descarga según el celular. Google Play queda vacío hasta que
+  // la app esté publicada en Android (mientras tanto muestra "Muy pronto").
+  var APP_STORE_URL = 'https://apps.apple.com/ar/app/cafeteando/id6819893769';
+  var PLAY_STORE_URL = '';
+  var ua = navigator.userAgent || '';
+  var esIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && 'ontouchend' in document);
+  var esAndroid = /Android/i.test(ua);
+  var STORE_URL = esIOS ? APP_STORE_URL : (esAndroid ? PLAY_STORE_URL : APP_STORE_URL);
+
+  var abrir = 'cafeteando://membresia';
+  var intentoAbrir = Date.now();
+
+  // Intenta abrir la app automáticamente.
+  window.location.href = abrir;
+
+  // Si a los 1.8 s seguimos en esta página, probablemente la app no está instalada.
+  setTimeout(function () {
+    if (document.hidden) return; // la app se abrió y esta pestaña quedó en segundo plano
+    document.getElementById('titulo').textContent = 'Abrí Cafeteando';
+    document.getElementById('msg').textContent = 'Tocá el botón para abrir la app en tu celular.';
+    document.getElementById('descarga').hidden = false;
+    if (STORE_URL) {
+      var t = document.getElementById('tienda');
+      t.href = STORE_URL;
+      t.hidden = false;
+    } else {
+      document.getElementById('sinlink').hidden = false;
+    }
+  }, 1800);
+</script>
+</body>
+</html>
