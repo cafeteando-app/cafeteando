@@ -32,7 +32,7 @@ html[lang="en"] .legal-es{display:none}html:not([lang="en"]) .legal-en{display:n
 </style>
 </head>
 <body>
-<header><a class="brand" href="/">Cafeteando®</a><div class="right"><a class="back" href="/"><span class="legal-es">← Volver al sitio</span><span class="legal-en">← Back to the site</span></a><button type="button" id="lg" aria-label="Cambiar idioma / Change language">EN</button></div></header>
+<header><a class="brand" href="/">Cafeteando®</a><div class="right"><a class="back" href="/"><span class="legal-es">← Volver al sitio</span><span class="legal-en">← Back to the site</span></a><button type="button" id="lg" aria-label="Cambiar idioma / Change language">ES</button></div></header>
 <main>
 <h1><span class="legal-es">Política de Privacidad</span><span class="legal-en">Privacy Policy</span></h1>
 <p class="sub">Cafeteando® · <span class="legal-es">tu pausa activa</span><span class="legal-en">your active break</span></p>
@@ -161,6 +161,6 @@ html[lang="en"] .legal-es{display:none}html:not([lang="en"]) .legal-en{display:n
 </div>
 </main>
 <footer>© 2026 Cafeteando® · <span class="legal-es">Marca registrada. Todos los derechos reservados.</span><span class="legal-en">Registered trademark. All rights reserved.</span> · <a href="mailto:contacto@somoscafeteando.com.ar">contacto@somoscafeteando.com.ar</a></footer>
-<script>(function(){var T={es:'Política de Privacidad — Cafeteando®',en:'Privacy Policy — Cafeteando®'};var q=new URLSearchParams(location.search).get('lang'),st=null;try{st=localStorage.getItem('cafeteando-lang')}catch(e){}var l=/en/i.test(q||st||'')?'en':'es';var b=document.getElementById('lg');function set(x){l=x;document.documentElement.lang=x;document.title=T[x];b.textContent=x==='en'?'ES':'EN';}b.addEventListener('click',function(){set(l==='en'?'es':'en')});set(l);})();</script>
+<script>(function(){var T={es:'Política de Privacidad — Cafeteando®',en:'Privacy Policy — Cafeteando®'};var q=new URLSearchParams(location.search).get('lang'),st=null;try{st=localStorage.getItem('cafeteando-lang-v2')}catch(e){}var l=/en/i.test(q||st||'')?'en':'es';var b=document.getElementById('lg');function set(x){l=x;document.documentElement.lang=x;document.title=T[x];b.textContent=x==='en'?'EN':'ES';}b.addEventListener('click',function(){var n=l==='en'?'es':'en';try{localStorage.setItem('cafeteando-lang-v2',n)}catch(e){}set(n)});set(l);})();</script>
 </body>
 </html>
