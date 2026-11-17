@@ -38,26 +38,9 @@
       <h1 id="titulo">Abriendo Cafeteando…</h1>
       <p id="msg">Si la app no se abre sola, tocá el botón.</p>
       <a class="btn" id="abrir" href="cafeteando://membresia">Abrir la app</a>
-
-      <div id="descarga" hidden>
-        <p class="small">¿Todavía no tenés la app?</p>
-        <!-- COMPLETAR al lanzar: link de descarga (App Store / Google Play).
-             Mientras esté vacío, el botón no se muestra. -->
-        <a class="btn sec" id="tienda" href="" hidden>Descargar Cafeteando</a>
-        <p class="small" id="sinlink" hidden>Muy pronto vas a poder descargarla desde la tienda de tu celular.</p>
-      </div>
     </div>
   </div>
 <script>
-  // Links de descarga según el celular. Google Play queda vacío hasta que
-  // la app esté publicada en Android (mientras tanto muestra "Muy pronto").
-  var APP_STORE_URL = 'https://apps.apple.com/ar/app/cafeteando/id6819893769';
-  var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=ar.com.somoscafeteando.app';
-  var ua = navigator.userAgent || '';
-  var esIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && 'ontouchend' in document);
-  var esAndroid = /Android/i.test(ua);
-  var STORE_URL = esIOS ? APP_STORE_URL : (esAndroid ? PLAY_STORE_URL : APP_STORE_URL);
-
   var abrir = 'cafeteando://membresia';
   var intentoAbrir = Date.now();
 
@@ -69,14 +52,6 @@
     if (document.hidden) return; // la app se abrió y esta pestaña quedó en segundo plano
     document.getElementById('titulo').textContent = 'Abrí Cafeteando';
     document.getElementById('msg').textContent = 'Tocá el botón para abrir la app en tu celular.';
-    document.getElementById('descarga').hidden = false;
-    if (STORE_URL) {
-      var t = document.getElementById('tienda');
-      t.href = STORE_URL;
-      t.hidden = false;
-    } else {
-      document.getElementById('sinlink').hidden = false;
-    }
   }, 1800);
 </script>
 </body>
