@@ -1032,7 +1032,9 @@ html:not([lang="en"]) .legal-en{display:none}
 /* Aviso "la app ya está disponible" */
 .hero-stores-label{display:inline-flex;align-items:center;gap:10px;margin:6px 0 12px;padding:5px 14px 5px 5px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(246,217,195,.28);font-size:var(--fs-sm);font-weight:500;color:#F6E7DB;letter-spacing:.01em;backdrop-filter:blur(6px)}
 .hero-stores-label .hs-new{display:inline-block;padding:3px 10px;border-radius:999px;background:linear-gradient(135deg,#C98163,#A96649);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-@media (max-width: 900px){.hero-stores-label{display:flex;width:max-content;max-width:100%;margin-left:auto;margin-right:auto}}
+.hero-stores-label>span:last-child{min-width:0}
+@media (max-width: 900px){.hero-stores-label{display:flex;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;text-align:left}}
+@media (max-width: 480px){.hero-stores-label{font-size:.78rem;gap:8px;padding:4px 12px 4px 4px}.hero-stores-label .hs-new{font-size:.62rem;padding:3px 8px}}
 </style>
 </head>
 <body>
